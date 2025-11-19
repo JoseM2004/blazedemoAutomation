@@ -48,7 +48,7 @@ public class StepDefinition {
         elViajero.attemptsTo(SearchFlights.fromOriginToDestination(origen, destino));
     }
 
-    @And("solicito la búsqueda del vuelo")
+    @And("solicito la busqueda del vuelo")
     public void solicitoBusqueda() {
 
         WaitTime.putWaitTimeOf(2000);
@@ -59,7 +59,7 @@ public class StepDefinition {
         );
     }
 
-    @Then("el sistema me presenta las alternativas de vuelos disponibles")
+    @Then("veo las alternativas de vuelos disponibles")
     public void presentaVuelos() {
         /*elViajero.should(
                 GivenWhenThen.seeThat(WebElementQuestion.the(FlightsListPage.FLIGHT_DETAILS),
@@ -70,7 +70,7 @@ public class StepDefinition {
 
     }
 
-    @And("se visualiza los detalles de los vuelos")
+    @And("visualizo los detalles de los vuelos")
     public void visualizaDetalles() {
 
         /*elViajero.should(
@@ -90,13 +90,13 @@ public class StepDefinition {
         // Ya se cumple con el escenario anterior
     }
 
-    @When("elijo una opción de vuelo")
+    @When("elijo una opcion de vuelo")
     public void eligeVuelo() {
         WaitTime.putWaitTimeOf(2000);
         elViajero.attemptsTo(SelectFlight.selectFlight());
     }
 
-    @Then("el sistema reserva el vuelo")
+    @Then("veo que mi vuelo ha sido reservado")
     public void sistemaReservaVuelo() {
         // Validar que se muestra el mensaje de reserva
         /*elViajero.should(
@@ -124,7 +124,7 @@ public class StepDefinition {
         // Ya se cumple con el paso anterior
     }
 
-    @When("suministro la información requerida para la compra")
+    @When("suministro la informacion requerida para la compra")
     public void suministraInfo() {
         PassengerInfo info = new PassengerInfo(
                 "Juan Perez",           // fullName
