@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Proceso de compra de un vuelo</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Proceso de compra de un vuelo</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Proceso de compra de un vuelo</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">22.818s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+<li>
+<a href="#">Standard error</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Buscar vuelos disponibles entre dos ciudades</td>
+<td class="success">9.399s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Ingresar la información necesaria para completar la compra</td>
+<td class="success">10.500s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Seleccionar una opción de vuelo</td>
+<td class="success">2.919s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre id="class-stdout">
+Scenario: Buscar vuelos disponibles entre dos ciudades               ?[90m# src/test/resources/features/flight_search.feature:10?[0m
+  ?[32mGiven ?[0m?[32mque accedo al sistema de reservas?[0m                            ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.accedeAlSistema()?[0m
+  ?[32mWhen ?[0m?[32mindico la ciudad de origen ?[0m?[32m?[1m&quot;Boston&quot;?[0m?[32m y destino ?[0m?[32m?[1m&quot;London&quot;?[0m        ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.indicaCiudades(java.lang.String,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32msolicito la búsqueda del vuelo?[0m                                 ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.solicitoBusqueda()?[0m
+  ?[32mThen ?[0m?[32mel sistema me presenta las alternativas de vuelos disponibles?[0m ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.presentaVuelos()?[0m
+  ?[32mAnd ?[0m?[32mse visualiza los detalles de los vuelos?[0m                        ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.visualizaDetalles()?[0m
+
+Scenario: Seleccionar una opción de vuelo                  ?[90m# src/test/resources/features/flight_search.feature:17?[0m
+  ?[32mGiven ?[0m?[32mque observo las alternativas de vuelos disponibles?[0m ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.observaVuelos()?[0m
+  ?[32mWhen ?[0m?[32melijo una opción de vuelo?[0m                           ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.eligeVuelo()?[0m
+  ?[32mThen ?[0m?[32mel sistema reserva el vuelo?[0m                         ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.sistemaReservaVuelo()?[0m
+  ?[32mAnd ?[0m?[32mvisualizo el formulario de compra?[0m                    ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.visualizaFormulario()?[0m
+
+Scenario: Ingresar la información necesaria para completar la compra ?[90m# src/test/resources/features/flight_search.feature:23?[0m
+  ?[32mGiven ?[0m?[32mque visualizo el formulario de compra?[0m                        ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.visualizaFormularioCompra()?[0m
+  ?[32mWhen ?[0m?[32msuministro la información requerida para la compra?[0m            ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.suministraInfo()?[0m
+  ?[32mAnd ?[0m?[32mcompro el vuelo?[0m                                                ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.comproVuelo()?[0m
+  ?[32mThen ?[0m?[32mel sistema muestra un resumen de los detalles del vuelo?[0m       ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.muestraResumen()?[0m
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
+</span>
+</div>
+<div class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre id="class-stderr">[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Buscar vuelos disponibles entre dos ciudades(proceso-de-compra-de-un-vuelo;buscar-vuelos-disponibles-entre-dos-ciudades)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars, --disable-gpu, --remote-allow-origins=*], extensions: []}}
+nov 19, 2025 6:11:22 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 142
+nov 19, 2025 6:11:22 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 142.0.7444.163. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Buscar vuelos disponibles entre dos ciudades
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Seleccionar una opción de vuelo(proceso-de-compra-de-un-vuelo;seleccionar-una-opción-de-vuelo)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Seleccionar una opción de vuelo
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Ingresar la información necesaria para completar la compra(proceso-de-compra-de-un-vuelo;ingresar-la-información-necesaria-para-completar-la-compra)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Ingresar la información necesaria para completar la compra
+----------------------------------------------------------------------?[0m
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stderr">Copy</button>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 19/11/2025, 6:11:42 a. m.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="3" failures="0" name="Proceso de compra de un vuelo" skipped="0" tests="3" time="0.62" timestamp="2025-11-18 12:38:09"><testcase name="Buscar vuelos disponibles entre dos ciudades"><error message="The actor El Viajero does not have the ability to browse the web" type="net.serenitybdd.screenplay.exceptions.ActorCannotBrowseTheWebException">The actor El Viajero does not have the ability to browse the web</error><system-err>The actor El Viajero does not have the ability to browse the web&#13;
+com.blazedemo.flighSearch.tasks.NavigateToHome.performAs(NavigateToHome.java:18)&#13;
+com.blazedemo.flighSearch.stepdefinitions.StepDefinition.accedeAlSistema(StepDefinition.java:41)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Seleccionar una opción de vuelo"><error message="Cannot invoke &quot;Object.getClass()&quot; because &quot;object&quot; is null" type="java.lang.NullPointerException">Cannot invoke "Object.getClass()" because "object" is null</error><system-err>Cannot invoke "Object.getClass()" because "object" is null&#13;
+com.blazedemo.flighSearch.tasks.SelectFlight.withNumber(SelectFlight.java:31)&#13;
+com.blazedemo.flighSearch.stepdefinitions.StepDefinition.eligeVuelo(StepDefinition.java:83)&#13;
+✽.elijo una opción de vuelo(file:///C:/Users/EQUIPO/IdeaProjects/BlazeDemoAutomation/src/test/resources/features/flight_search.feature:19)&#13;
+</system-err></testcase><testcase name="Ingresar la información necesaria para completar la compra"><error message="Element should have been &quot;select&quot; but was &quot;&quot;&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.support.ui.UnexpectedTagNameException">Element should have been "select" but was ""
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: unknown</error><system-err>Element should have been "select" but was ""
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: driver.version: unknown&#13;
+com.blazedemo.flighSearch.tasks.CompletePurchase.performAs(CompletePurchase.java:23)&#13;
+com.blazedemo.flighSearch.stepdefinitions.StepDefinition.suministraInfo(StepDefinition.java:124)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>
