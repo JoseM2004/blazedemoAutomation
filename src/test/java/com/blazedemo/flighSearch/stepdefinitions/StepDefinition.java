@@ -146,7 +146,7 @@ public class StepDefinition {
         // Ya se ejecuta en el paso anterior
     }
 
-    @Then("el sistema muestra un resumen de los detalles del vuelo")
+    @Then("veo un resumen de los detalles del vuelo")
     public void muestraResumen() {
         //elViajero.attemptsTo(VerifyPurchase.wasSuccessful());
         WaitTime.putWaitTimeOf(2000);

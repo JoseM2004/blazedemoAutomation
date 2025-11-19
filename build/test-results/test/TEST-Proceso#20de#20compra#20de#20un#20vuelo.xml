@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Proceso de compra de un vuelo" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-19T11:11:18.077Z" hostname="DESKTOP-EC14KE3" time="22.819">
+<testsuite name="Proceso de compra de un vuelo" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-19T12:41:54.940Z" hostname="DESKTOP-EC14KE3" time="20.856">
   <properties/>
-  <testcase name="Buscar vuelos disponibles entre dos ciudades" classname="Proceso de compra de un vuelo" time="9.399"/>
-  <testcase name="Seleccionar una opción de vuelo" classname="Proceso de compra de un vuelo" time="2.919"/>
-  <testcase name="Ingresar la información necesaria para completar la compra" classname="Proceso de compra de un vuelo" time="10.5"/>
+  <testcase name="Buscar vuelos disponibles entre dos ciudades" classname="Proceso de compra de un vuelo" time="7.885"/>
+  <testcase name="Seleccionar una opción de vuelo" classname="Proceso de compra de un vuelo" time="2.791"/>
+  <testcase name="Ingresar la información necesaria para completar la compra" classname="Proceso de compra de un vuelo" time="10.179"/>
   <system-out><![CDATA[
 Scenario: Buscar vuelos disponibles entre dos ciudades               ?[90m# src/test/resources/features/flight_search.feature:10?[0m
   ?[32mGiven ?[0m?[32mque accedo al sistema de reservas?[0m                            ?[90m# com.blazedemo.flighSearch.stepdefinitions.StepDefinition.accedeAlSistema()?[0m
@@ -34,9 +34,9 @@ Buscar vuelos disponibles entre dos ciudades(proceso-de-compra-de-un-vuelo;busca
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars, --disable-gpu, --remote-allow-origins=*], extensions: []}}
-nov 19, 2025 6:11:22 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+nov 19, 2025 7:41:58 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-nov 19, 2025 6:11:22 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+nov 19, 2025 7:41:58 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.163. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

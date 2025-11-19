@@ -24,5 +24,5 @@
       Given que visualizo el formulario de compra
       When suministro la información requerida para la compra
       And compro el vuelo
-      Then el sistema muestra un resumen de los detalles del vuelo
+      Then veo un resumen de los detalles del vuelo
 
