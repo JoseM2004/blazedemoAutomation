@@ -6,6 +6,7 @@ import com.blazedemo.flighSearch.questions.*;
 import com.blazedemo.flighSearch.tasks.*;
 import com.blazedemo.flighSearch.userinterfaces.HomePage;
 import com.blazedemo.flighSearch.utils.WaitTime;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -18,6 +19,8 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.webdriver.SerenityWebdriverManager;
 
+
+import java.util.Map;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.*;
@@ -125,18 +128,21 @@ public class StepDefinition {
     }
 
     @When("suministro la informacion requerida para la compra")
-    public void suministraInfo() {
+    public void suministraInfo(DataTable table) {
+
+        Map<String, String> data = table.asMaps().get(0);
+
         PassengerInfo info = new PassengerInfo(
-                "Juan Perez",           // fullName
-                "Calle Falsa 123",      // address
-                "Bogotá",               // city
-                "Cundinamarca",         // state
-                "110111",               // zipCode
-                "Visa",                 // cardType
-                "4111111111111111",     // cardNumber
-                "12",                   // cardExpiryMonth
-                "2025",                 // cardExpiryYear
-                "Juan Perez"            // nameOnCard
+                data.get("fullName"),
+                data.get("address"),
+                data.get("city"),
+                data.get("state"),
+                data.get("zipCode"),
+                data.get("cardType"),
+                data.get("cardNumber"),
+                data.get("cardExpiryMonth"),
+                data.get("cardExpiryYear"),
+                data.get("nameOnCard")
         );
         elViajero.attemptsTo(CompletePurchase.with(info));
     }

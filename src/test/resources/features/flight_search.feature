@@ -23,6 +23,8 @@
     Scenario: Ingresar la información necesaria para completar la compra
       Given que visualizo el formulario de compra
       When suministro la informacion requerida para la compra
+        | fullName | address           | city   | state        | zipCode | cardType | cardNumber       | cardExpiryMonth | cardExpiryYear | nameOnCard |
+        | Juan Perez | Calle Falsa 123 | Bogotá | Cundinamarca | 110111  | Visa     | 4111111111111111 | 12              | 2025           | Juan Perez |
       And compro el vuelo
       Then veo un resumen de los detalles del vuelo
 
