@@ -12,12 +12,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.model.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.webdriver.SerenityWebdriverManager;
+import net.thucydides.model.environment.SystemEnvironmentVariables;
 
 
 import java.util.Map;
@@ -42,7 +44,11 @@ public class StepDefinition {
 
     @Given("que accedo al sistema de reservas")
     public void accedeAlSistema() {
-        elViajero.attemptsTo(NavigateToHome.to("https://blazedemo.com/"));
+        String url = EnvironmentSpecificConfiguration.from(
+                SystemEnvironmentVariables.createEnvironmentVariables()
+        ).getProperty("blazeDemoBaseUrl");
+
+        elViajero.attemptsTo(NavigateToHome.to(url));
     }
 
 
