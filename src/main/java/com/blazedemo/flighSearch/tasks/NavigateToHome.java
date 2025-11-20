@@ -18,11 +18,7 @@ public class NavigateToHome implements Task {
         actor.attemptsTo(Open.url(url));
     }
 
-    public static NavigateToHome to(String url) {
+    public static NavigateToHome start(String url) {
         return Tasks.instrumented(NavigateToHome.class, url);
-    }
-
-    public static NavigateToHome start() {
-        return Tasks.instrumented(NavigateToHome.class, "https://blazedemo.com/");
     }
 }

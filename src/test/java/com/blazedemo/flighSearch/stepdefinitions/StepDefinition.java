@@ -48,7 +48,7 @@ public class StepDefinition {
                 SystemEnvironmentVariables.createEnvironmentVariables()
         ).getProperty("blazeDemoBaseUrl");
 
-        elViajero.attemptsTo(NavigateToHome.to(url));
+        elViajero.attemptsTo(NavigateToHome.start(url));
     }
 
 
